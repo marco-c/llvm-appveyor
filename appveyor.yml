@@ -97,10 +97,10 @@ before_build:
   - set LLVM_ROOT=%APPVEYOR_BUILD_FOLDER%/llvm
   - mkdir "%LLVM_ROOT%"
   - set LLVM_GIT=http://llvm.org/git
-  - git clone --depth=1 %LLVM_GIT%/llvm.git %LLVM_ROOT%
-  - git clone --depth=1 %LLVM_GIT%/clang.git %LLVM_ROOT%\tools\clang
-  - git clone --depth=1 %LLVM_GIT%/clang-tools-extra.git %LLVM_ROOT%\tools\clang\tools\extra
-  - git clone --depth=1 %LLVM_GIT%/lld.git %LLVM_ROOT%\tools\lld
+  - git clone --branch release_60 --depth=1 %LLVM_GIT%/llvm.git %LLVM_ROOT%
+  - git clone --branch release_60 --depth=1 %LLVM_GIT%/clang.git %LLVM_ROOT%\tools\clang
+  - git clone --branch release_60 --depth=1 %LLVM_GIT%/clang-tools-extra.git %LLVM_ROOT%\tools\clang\tools\extra
+  - git clone --branch release_60 --depth=1 %LLVM_GIT%/lld.git %LLVM_ROOT%\tools\lld
 
   #############################################################################
   # Setup MSVC Environment
