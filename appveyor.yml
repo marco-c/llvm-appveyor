@@ -1,8 +1,7 @@
 ###############################################################################
-# Appveyor configuration file for LLVM
+# Appveyor configuration file for building LLVM
 # -----------------------------------------------------------------------------
-# This appveyor.yml is for the LLVM repository (Example: github.com/llvm-mirror/llvm)
-# It builds LLVM, Clang, Clang tools extra, LLD.
+# It builds LLVM and Clang.
 ###############################################################################
 
 version: '{build}'
@@ -138,7 +137,7 @@ build_script:
   #############################################################################
   # Build Step
   - ninja
-  - ninja check-all # I wouldn't sweat a few failures here. This step is optional
+  # - ninja check-all
   - ninja install
 
 on_failure:
